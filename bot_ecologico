@@ -14,5 +14,5 @@ async def botella_reciclar(ctx):
     ]
     await ctx.send(random.choice(que_botella))
 
-bot.run("MTI4Nzc1NDQ5NzQxMzc0MjY2Mg.GRryyS.NW6GUQjQig1XjAMi6CfCj_47_UqGdjmtkKlGaA")
+bot.run("MTI4Nzc1NDQ5NzQxMzc0MjY2Mg.GRryyS.NW6GUQjQig1XjAMi6CfCj_47_UqGdjmtkKlGaAttt")
 
