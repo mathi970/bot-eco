@@ -1,0 +1,18 @@
+import discord 
+import random
+from discord.ext import commands 
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix = "%" , intents=intents)
+@bot.event
+async def on_ready():
+    print(f'Hemos iniciado sesión como {bot.user}')
+
+@bot.command()
+async def botella_reciclar(ctx):
+    que_botella = ["puedes hacer un portavelas, cortas la parte inferior de la botella y en la parte superior de lo que cortaste colocas un pedazo de trapo y ya esta👍, haciendo esta accion contribuyes a la salvacion del planeta", "puedes hacer un monedero, cortas la parte inferior de 2 botellas y les pegas una cremallera a los 2 en la parte superior de lo que cortaste y ya esta👍, haciendo esta accion contribuyes a que millones de especies no mueran", "puedes hacer un porta lapices, cortas la parte superiot de la botella(de modo que despues la botella quede grande que los lapices) y en la parte sueperior de lo que cortaste colocas un trozo  de tela para no cotarse👍, haciendo esta aportas a miles de millones de personas"
+    ]
+    await ctx.send(random.choice(que_botella))
+
+bot.run("MTI4Nzc1NDQ5NzQxMzc0MjY2Mg.GRryyS.NW6GUQjQig1XjAMi6CfCj_47_UqGdjmtkKlGaA")
+
