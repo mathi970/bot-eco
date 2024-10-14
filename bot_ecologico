@@ -10,9 +10,137 @@ async def on_ready():
 
 @bot.command()
 async def botella_reciclar(ctx):
-    que_botella = ["puedes hacer un portavelas, cortas la parte inferior de la botella y en la parte superior de lo que cortaste colocas un pedazo de trapo y ya esta👍, haciendo esta accion contribuyes a la salvacion del planeta", "puedes hacer un monedero, cortas la parte inferior de 2 botellas y les pegas una cremallera a los 2 en la parte superior de lo que cortaste y ya esta👍, haciendo esta accion contribuyes a que millones de especies no mueran", "puedes hacer un porta lapices, cortas la parte superiot de la botella(de modo que despues la botella quede grande que los lapices) y en la parte sueperior de lo que cortaste colocas un trozo  de tela para no cotarse👍, haciendo esta aportas a miles de millones de personas"
+    reciclar_botella = [
+        "Puedes hacer un portavelas: corta la parte inferior de la botella y en la parte superior coloca un pedazo de trapo. ¡Listo! 👍",
+        "Puedes hacer un monedero: corta la parte inferior de 2 botellas y pega una cremallera en la parte superior de lo que cortaste. 👍",
+        "Puedes hacer un porta lápices: corta la parte superior de la botella y coloca un trozo de tela en la parte superior para que no te cortes. 👍"
     ]
-    await ctx.send(random.choice(que_botella))
+    await ctx.send(random.choice(reciclar_botella))
 
-bot.run("MTI4Nzc1NDQ5NzQxMzc0MjY2Mg.GRryyS.NW6GUQjQig1XjAMi6CfCj_47_UqGdjmtkKlGaAttt")
+@bot.command()
+async def reciclar_prendas_usadas(ctx):
+    prendas_usadas = [
+        "Puedes donar la prenda: asegúrate de que esté limpia y en buenas condiciones. Busca una organización benéfica cercana que acepte donaciones. 👍",
+        "Transforma una camiseta en una bolsa reutilizable: corta las mangas y el cuello de la camiseta. Cose o ata la parte inferior para cerrarla. ¡Listo! 👍",
+        "Crea un cojín: corta varias piezas de tela de la prenda, cose los bordes y rellénalo con tela. ¡Decora tu hogar! 👍"
+    ]
+    await ctx.send(random.choice(prendas_usadas))
+
+@bot.command()
+async def reciclar_prendas_rotas(ctx):
+    prendas_rotas = [
+        "Repara con parches: si hay un agujero, cose un parche de tela de otro color encima. 👍",
+        "Crea un trapo de limpieza: corta la prenda en trozos de aproximadamente 30x30 cm y úsalos para limpiar superficies. 👍",
+        "Haz un bolso: corta la parte superior de la prenda y cose los lados. Agrega un asa usando una cinta resistente. 👍"
+    ]
+    await ctx.send(random.choice(prendas_rotas))
+
+@bot.command()
+async def reciclar_carton(ctx):
+    reciclar_carton = [
+        "Haz compost: corta el cartón en tiras pequeñas y mézclalo con restos de comida en tu compostador. 👍",
+        "Crea un organizador de escritorio: corta una caja de cartón a la mitad, pinta o decora. Usa cada lado para organizar lápices y papeles. 👍",
+        "Haz un juguete para niños: recorta formas de animales en cartón y pégalas en palitos de madera. Deja que los niños las pinten y decoren. 👍"
+    ]
+    await ctx.send(random.choice(reciclar_carton))
+
+@bot.command()
+async def reciclar_madera(ctx):
+    reciclar_madera = [
+        "Haz un estante: usa tablones de madera viejos, lija los bordes y pinta. Coloca soportes en la pared y monta el estante. 👍",
+        "Crea un marco de fotos: corta madera en forma de cuadrado o rectángulo, lija y pinta. Coloca vidrio en el frente y añade tu foto. 👍",
+        "Construye un jardín vertical: usa tablones para hacer una estructura en la pared. Coloca macetas en los estantes y planta tus flores. 👍"
+    ]
+    await ctx.send(random.choice(reciclar_madera))
+
+@bot.command()
+async def por_que_reciclar(ctx):
+    await ctx.send("Reciclar no solo ayuda al medio ambiente, sino que también tiene beneficios económicos y sociales. Es una acción sencilla que todos podemos implementar para contribuir a un futuro más sostenible.")
+
+@bot.command()
+async def que_es_calentamiento_global(ctx):
+    await ctx.send("El calentamiento global es el aumento gradual de las temperaturas de la Tierra causado por el incremento de gases de efecto invernadero, como el dióxido de carbono, en la atmósfera. Para más información, visita: https://www.marcandoelcamino.org/calentamiento-global")
+
+@bot.command()
+async def evitar_calentamiento_global(ctx):
+    await ctx.send("Debemos evitar el calentamiento global porque sus efectos son devastadores. Puede causar inundaciones en áreas costeras, cambios extremos en el clima y pérdida de biodiversidad. Para más información, visita: https://www.wwf.org.co")
+@bot.command()
+async def consecuencias_calentamiento_global(ctx):
+    await ctx.send("Las consecuencias del calentamiento global incluyen el aumento del nivel del mar, cambios climáticos extremos y pérdida de biodiversidad. Estos efectos amenazan nuestros ecosistemas. Para más información, visita: https://www.un.org/es/climatechange")
+@bot.command()
+async def beneficios_reciclar(ctx):
+    await ctx.send("Reciclar ayuda a reducir la cantidad de residuos en vertederos, conserva recursos naturales y disminuye la contaminación. Para más información, visita: https://www.ecologistasenaccion.org")
+@bot.command()
+async def acciones_reducir_huella(ctx):
+    await ctx.send("Puedes reducir tu huella de carbono usando transporte público, caminando o usando bicicletas, y ahorrando energía en casa. Para más información, visita: https://www.greenpeace.org")
+
+@bot.command()
+async def datos_calentamiento_global(ctx):
+    await ctx.send("El aumento de la temperatura global promedio ha sido de aproximadamente 1.2 °C desde el siglo XIX. Para más información, visita: https://climate.nasa.gov/evidence/")
+
+@bot.command()
+async def consejos_reciclar(ctx):
+    await ctx.send("Asegúrate de reciclar correctamente: limpia los envases antes de reciclarlos, separa los materiales y evita contaminar el reciclaje. Para más información, visita: https://www.epa.gov/recycle")
+
+@bot.command()
+async def ejemplos_exito_reciclaje(ctx):
+    await ctx.send("Algunas ciudades, como Buenos Aires, están implementando programas de reciclaje exitosos. Esto demuestra que el reciclaje puede tener un gran impacto. Para más información, visita: https://www.buenosaires.gob.ar")
+
+@bot.command()
+async def impacto_reciclaje(ctx):
+    await ctx.send("Reciclar una tonelada de papel puede salvar 17 árboles y 26,000 litros de agua. Para más información, visita: https://www.recyclingpartnership.org")
+
+@bot.command()
+async def consejos_reducir(ctx):
+    consejos = [
+        "Reduce el consumo de agua cerrando el grifo mientras te lavas los dientes.",
+        "Compra productos locales para reducir la huella de carbono del transporte.",
+        "Usa bolsas reutilizables al hacer la compra."
+    ]
+    await ctx.send(random.choice(consejos) + " Para más información, visita: https://www.sustainableliving.com")
+
+@bot.command()
+async def noticias_ecologicas(ctx):
+    await ctx.send("Mantente informado sobre el medio ambiente. Aquí tienes algunas fuentes de noticias en español:\n- https://www.eltiempo.com/medioambiente\n- https://www.bbc.com/mundo/topics/cyx9j1g1g3lt\n- https://www.ecologistasenaccion.org")
+
+@bot.command()
+async def reto_ecologico(ctx):
+    await ctx.send("¡Únete al reto ecológico! Esta semana, intenta no usar plásticos desechables: lleva tu propia botella y bolsas reutilizables.")
+
+@bot.command()
+async def especies_en_peligro(ctx):
+    especies = [
+        "El jaguar: amenazado por la pérdida de hábitat y caza furtiva.",
+        "El cóndor andino: en peligro crítico debido a la pérdida de hábitat y envenenamiento.",
+        "La vaquita marina: en peligro crítico de extinción debido a la pesca ilegal."
+    ]
+    await ctx.send(random.choice(especies) + " Puedes ayudar apoyando organizaciones de conservación. Para más información, visita: https://www.wwf.org.co")
+
+@bot.command()
+async def beneficios_energia_renovable(ctx):
+    await ctx.send("La energía renovable reduce las emisiones de gases de efecto invernadero y ayuda a diversificar la fuente de energía. Para más información, visita: https://www.renovables.gov.co")
+
+@bot.command()
+async def mitos_reciclaje(ctx):
+    mitos = [
+        "Mito: Todo el plástico es reciclable. Realidad: No todos los plásticos se pueden reciclar.",
+        "Mito: Reciclar es suficiente para salvar el planeta. Realidad: También debemos reducir y reutilizar."
+    ]
+    await ctx.send(random.choice(mitos) + " Para más información, visita: https://www.ecologistasenaccion.org")
+
+@bot.command()
+async def historias_inspiradoras(ctx):
+    historias = [
+        "La ciudad de Buenos Aires ha implementado un programa de reciclaje que ha mejorado su tasa de reciclaje considerablemente. Para más información, visita: https://www.buenosaires.gob.ar",
+        "En Costa Rica, el 25 porciento del territorio está protegido como parque nacional. Para más información, visita: https://www.visitcostarica.com",
+        "La comunidad de Capannori en Italia ha aumentado su tasa de reciclaje al 65 porciento en dos años. Para más información, visita: https://www.comune.capannori.lu.it",
+        "En Colombia, el programa 'Basura Cero' busca reducir los residuos y promover el reciclaje. Para más información, visita: https://www.bogota.gov.co",
+        "El programa de reforestación de la Fundación Arbor Day ha plantado millones de árboles en todo el mundo. Para más información, visita: https://www.arborday.org"
+    ]
+    await ctx.send(random.choice(historias))
+
+
+bot.run("MTI4Nzc1NDQ5NzQxMzc0MjY2Mg.GM4UzJ.nN3e4SeSjZfLSmkO2I3acFjh4W_FB_ANsvE5oottttttt")
+
+
 
